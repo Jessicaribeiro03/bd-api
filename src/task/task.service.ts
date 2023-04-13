@@ -33,4 +33,10 @@ export class TaskService {
     return this.taskReposity.remove(await this.findOne(id))
   }
 
+  findAllByUser(id: string) {
+    return this.taskReposity.find({where: {user:{id:Number.parseInt(id)}}});
+  }
+  
+
+
 }

@@ -33,4 +33,11 @@ export class TaskController {
   remove(@Param('id') id: string) {
     return this.taskService.remove(+id);
   }
+
+  @Get('user/:id')
+  findAllByUser(@Param('id') id: string){
+    return this.taskService.findAllByUser(id);
+  }
+
+
 }
